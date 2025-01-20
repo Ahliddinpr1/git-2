@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+}
+
+$maincolor1: #FF9900;
+$maincolor2: #263640;
+
+@mixin button($color, $bgcolor) {
+    background-color: $bgcolor;
+    border: none;
+    padding: 15px 30px;
+    color: $color;
+}
+.zagolovok {
+    display: flex;
+    margin: auto;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin-top: 50px;
+    .menu {
+        display: flex;
+        width: 500px;
+        justify-content: space-between;
+    }
+    .p1 {
+        border-bottom: solid 2px $maincolor1;
+        color: $maincolor1;
+    }
+    button {
+        @include button(white, $maincolor1)    
+    }
+}
+.page1 {
+    width: 60%;
+    margin: auto;
+    margin-top: 100px;
+    display: grid;
+    align-items: center;
+    grid-template: {
+        columns: 50% 50%;
+        rows:  500px;
+    }
+    .page1_text {
+        gap: 100px;
+        p {
+            color: gray;
+            margin: 30px 0px;
+        }
+        button {
+            @include button(white, $maincolor1)
+        }
+    }
+    .div {
+        background-color: #F5F8FA;
+        width: 100%;
+        height: 100%;
+    }
+    img {
+        position: absolute;
+        width: 600px;
+        height: 700px;
+        top: 150px;
+        left: 1000px;
+    }
+}
+.page2 {
+    background-color:  #F5F8FA;
+    padding: 200px;
+    h1 {
+        margin-left: 50px;
+    }
+    p {
+        color: gray;
+        padding: 20px 0px;
+        margin-left: 50px;
+    }
+    .p2 {
+        color: orange;
+    }
+    .images {
+        display: grid;
+        grid-template: {
+            columns: 1fr 1fr 1fr;
+            rows:  800px;
+        }
+        img {
+            width: 100%;
+        }
+    }
+    .qwertyuiop {
+        position: absolute;
+        margin-top: -470px;
+        margin-left: 800px;
+    }
+}
+.blue {
+    margin-left: 200px;
+    width: 60%;
+    height: 400px;
+    background-color: #263640;
+    padding: 50px;
+    .p1, h1 {
+        color: white;
+    }
+}
+.page3 {
+    width: 70%;
+    height: 500px;
+    margin: auto;
+    margin-top: 100px;
+    .top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        button {
+            @include button(white, $maincolor1)
+        }
+    }
+    .bottom {
+        display: grid;
+        grid-template: {
+            columns: 1fr 1fr 1fr;
+            rows:  250px;
+        }
+        .p1 {
+            margin-left: 50px;
+            color: black;
+            font-size: 20px;
+        }
+        p {
+            color: gray;
+            padding: 20px 0px;
+            margin-left: 50px;
+        }
+        .p2 {
+            color: orange;
+        }
+    }
+}
+.page4 {
+    width: 60%;
+    margin: auto;
+    margin-top: -200px;
+    display: grid;
+    align-items: center;
+    grid-template: {
+        columns: 50% 50%;
+        rows:  500px;
+    }
+    .page4_text {
+        gap: 100px;
+        p {
+            color: gray;
+            margin: 30px 0px;
+        }
+        button {
+            @include button(white, $maincolor1)
+        }
+    }
+    img {
+        position: absolute;
+        width: 600px;
+        height: 400px;
+        top: 3000px;
+        left: 1000px;
+    }
+}
